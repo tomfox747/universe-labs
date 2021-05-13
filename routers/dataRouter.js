@@ -4,6 +4,7 @@ const data = require('../data/data.js')
 
 router.get('/get', (req,res) =>{
     try{
+        console.log("end point called")
         let queryString = req.query.query.toLowerCase()
         if(queryString === ''){
             res.status(200).send(data)
