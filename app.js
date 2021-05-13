@@ -12,7 +12,7 @@ app.use(express.static("client"));
 
 app.use('/data', dataRouter)
 
-app.use((req, res, next) => {
+app.use('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 

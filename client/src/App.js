@@ -11,64 +11,6 @@ import useApi from './hooks/useApi'
 //Styling
 import * as styles from './styles/AppStyles' 
 
-const testData=[
-  {
-    Name:"US",
-    TimeFormat:"UTC-11",
-    Hours:-11,
-    Mins:30
-  },
-  {
-    Name:"France",
-    TimeFormat:"UTC-3",
-    Hours:3,
-    Mins:0
-  },
-  {
-    Name:"UK",
-    TimeFormat:"UTC-0",
-    Hours:0,
-    Mins:-30
-  },
-  {
-    Name:"US",
-    TimeFormat:"UTC-11",
-    Hours:-11,
-    Mins:30
-  },
-  {
-    Name:"France",
-    TimeFormat:"UTC-3",
-    Hours:3,
-    Mins:0
-  },
-  {
-    Name:"UK",
-    TimeFormat:"UTC-0",
-    Hours:0,
-    Mins:-30
-  },
-  {
-    Name:"US",
-    TimeFormat:"UTC-11",
-    Hours:-11,
-    Mins:30
-  },
-  {
-    Name:"France",
-    TimeFormat:"UTC-3",
-    Hours:3,
-    Mins:0
-  },
-  {
-    Name:"UK",
-    TimeFormat:"UTC-0",
-    Hours:0,
-    Mins:-30
-  }
-]
-
-
 function App() {
   const {get} = useApi()
   const [data, setData] = useState([])
@@ -78,7 +20,7 @@ function App() {
     let didCancel = false
     
     const call = () =>{
-      get('http://localhost:8000/data/get',query, (res) =>{
+      get('http://localhost:5000/data/get',query, (res) =>{
         if(res !== null && res !== undefined && didCancel !== true){
           setData(res);
         }
