@@ -12,7 +12,7 @@ const TimeZone = (props) =>{
     let Name = props.element.Name.slice(0 , props.element.Name.length - timeFormat.length);
 
     let localTime = dayjs()
-                    .add(parseInt(props.element.Hours), 'hour')
+                    .add(parseInt(props.element.Hours) - 1, 'hour')
                     .add(parseInt(props.element.Mins),'minute')
                     .format('HH:mm:ss')
 

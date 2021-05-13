@@ -20,7 +20,7 @@ function App() {
     let didCancel = false
     
     const call = () =>{
-      get('https://universe-labs.herokuapp.com/data/get',query, (res) =>{
+      get('http://localhost:5000/data/get',query, (res) =>{
         if(res !== null && res !== undefined && didCancel !== true){
           setData(res);
         }
