@@ -15,7 +15,7 @@ FOR RUNNING THE PROJECT LOCALLY (the api call is configured to run with the host
    - Direct the to the root folder containing the App.js and Server.js files
    - run 'npm install'
 3. Run the project with either 'npm start' or 'nodemon server'
-4. In a browser, go to the following url : http://localhost:8000
+4. In a browser, go to the following url : http://localhost:5000
 
 
 NOTES
